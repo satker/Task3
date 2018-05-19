@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+  <bean id="a" class="org.epam.com.beans.A">
+    <context:property-placeholder location="classpath:a.properties"/>
+  </bean>
+  <bean id="b" class="org.epam.com.beans.B">
+    <constructor-arg ref="a"/>
+  </bean>
+  <bean id="c" class="org.epam.com.beans.C">
+    <lookup-method name="getD" bean="d"/>
+    <property name="d" ref="d"/>
+  </bean>
+  <bean id="d" class="org.epam.com.beans.D" scope="prototype">
+  </bean>
+  <bean id="e" class="org.epam.com.beans.E">
+    <replaced-method name="saySomething" replacer="e"/>
+  </bean>
+  <bean id="f" class="org.epam.com.beans.F" init-method="startLife" destroy-method="endLife">
+  </bean>
+</beans>

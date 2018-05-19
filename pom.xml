@@ -7,6 +7,27 @@
   <groupId>org.epam.task3</groupId>
   <artifactId>org.epam.task3</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <properties>
+    <spring.ver>5.0.6.RELEASE</spring.ver>
+    <lombok.ver>1.16.20</lombok.ver>
+  </properties>
 
+  <dependencies>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>${spring.ver}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>${spring.ver}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>${spring.ver}</version>
+  </dependency>
+  </dependencies>
 
 </project>
