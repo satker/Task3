@@ -9,4 +9,8 @@ public class F {
   private void endLife() {
     System.out.println("Bean dead");
   }
+
+  public void iLive() {
+    System.out.println("Bean live ");
+  }
 }
